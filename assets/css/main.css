@@ -12,3 +12,13 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+@font-face {
+  font-family: 'lato';
+  src: local('lato'), url('../fonts/Lato-Medium.woff') format('woff'),
+    url('../fonts/Lato-Medium.woff2') format('woff2');
+}
+
+html {
+  font-family: 'lato';
+}

@@ -1,12 +1,24 @@
 <template>
-  <div class="bg-main pt-16 h-screen overflow-y-scroll">
+  <div class="bg-main py-20 h-screen overflow-y-scroll">
     <Topbar />
-    <MainPage />
-    <Navbar />
+    <Banner />
+    <Navbar @tabSelected="selectTab" />
+    <JobOptions v-if="selectedTab" :selectedTab="selectedTab" />
     <Bottombar />
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      selectedTab: null,
+    }
+  },
+  methods: {
+    selectTab(tab) {
+      this.selectedTab = tab
+    },
+  },
+}
 </script>
